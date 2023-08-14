@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delete Confirmation</title>
+</head>
+
+<body>
+    <section id="secret-info" >
+        <h1 style="text-align: center;">Confidential Information</h1>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatibus, neque. Quod, iste animi inventore
+            repudiandae deleniti repellendus quaerat tempore? Illo, rerum. Non assumenda fugit deleniti et praesentium
+            est
+            soluta suscipit incidunt sequi consequuntur nemo molestias, nihil dolores debitis, officia porro amet?
+            Voluptatem reiciendis consequuntur eum exercitationem iusto aut, enim at.</p>
+
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maiores, molestiae iusto. Adipisci omnis
+            dignissimos
+            dolor quisquam facere odio, obcaecati vitae suscipit rem, recusandae quam aperiam illum nisi consequatur
+            harum
+            minus, rerum officiis ipsa quod!</p>
+        <br>
+        <h2 style="text-align: center;">Tor nanir Heda!!</h2>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolores ad repellendus officiis eos? Deleniti natus
+            eius ullam recusandae, sunt, totam eaque rem harum, quod maiores nostrum unde qui eum velit aut nam sequi
+            error
+            nulla ducimus odit. Quisquam natus placeat totam quo consequuntur molestiae non? Obcaecati omnis aperiam
+            nostrum
+            provident, corporis autem.</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatibus, neque. Quod, iste animi inventore
+            repudiandae deleniti repellendus quaerat tempore? Illo, rerum. Non assumenda fugit deleniti et praesentium
+            est
+            soluta suscipit incidunt sequi consequuntur nemo molestias, nihil dolores debitis, officia porro amet?
+            Voluptatem reiciendis consequuntur eum exercitationem iusto aut, enim at.</p>
+
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maiores, molestiae iusto. Adipisci omnis
+            dignissimos
+            dolor quisquam facere odio, obcaecati vitae suscipit rem, recusandae quam aperiam illum nisi consequatur
+            harum
+            minus, rerum officiis ipsa quod!</p>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolores ad repellendus officiis eos? Deleniti natus
+            eius ullam recusandae, sunt, totam eaque rem harum, quod maiores nostrum unde qui eum velit aut nam sequi
+            error
+            nulla ducimus odit. Quisquam natus placeat totam quo consequuntur molestiae non? Obcaecati omnis aperiam
+            nostrum
+            provident, corporis autem.</p>
+    </section>
+
+    <div id="delete-confirmation">
+        <input type="text" placeholder="Please input the secret Key" id="password">
+        <br>
+        <br>
+        <button id="delete-btn" disabled>Burn the doc</button>
+    </div>
+
+    <script>
+        document.getElementById('password').addEventListener('keyup', function (event) {
+            if(event.target.value === 'Password nai'){
+                document.getElementById('delete-btn').removeAttribute('disabled');
+            }
+            else{
+                document.getElementById('delete-btn').setAttribute('disabled', true);
+            }
+        })
+        document.getElementById('delete-btn').addEventListener('click', function () {
+            document.getElementById('secret-info').style.display = 'none';
+        })
+    </script>
+
+</body>
+
+</html>
