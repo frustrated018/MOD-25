@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Posting Comment</title>
+</head>
+
+<body>
+    <h1>Making a Comment box and posting comment</h1>
+
+    <section id="comment-section">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit incidunt optio quo assumenda aspernatur
+            sapiente! Quos quisquam aspernatur a iste corrupti modi voluptate obcaecati, reiciendis eveniet numquam
+            minus quibusdam omnis velit totam architecto nisi repellat, accusamus et ipsum quasi, quis voluptatibus.
+            Voluptatum quod maiores hic. Mollitia tempore magnam, totam ad amet nam voluptas sunt quis omnis? Fuga nisi
+            nam dolor?</p>
+
+        <p>Veniam nesciunt nobis quae dicta enim, laborum nulla repellat ducimus perspiciatis voluptatibus voluptates
+            repudiandae veritatis molestias iste accusantium. Corrupti, consequatur nam. Tempore reiciendis quis animi a
+            harum pariatur officiis magni illum necessitatibus vel, debitis aperiam, iure nobis consectetur ullam quia
+            assumenda, porro dolores corporis expedita ratione quaerat. Mollitia modi laborum quaerat odio voluptates
+            ipsa eius eaque, veniam quod, possimus voluptatibus.</p>
+
+        <p>Sequi labore provident in quis eveniet! Ex eligendi nostrum fugiat alias. Voluptates rerum debitis
+            dignissimos ab porro provident, dolor maxime sequi assumenda aut quae sint excepturi, veritatis placeat,
+            incidunt eaque amet eum temporibus nisi perspiciatis vitae asperiores! Sit nihil illo voluptatibus magni
+            cupiditate quam deserunt distinctio, obcaecati tenetur quidem fuga vitae dolor officia unde vero saepe odit
+            sapiente quasi deleniti!</p>
+    </section>
+    <div>
+        <textarea name="" id="new-comment" cols="60" rows="6"></textarea>
+        <br>
+        <button id="btn-post">Post!</button>
+    </div>
+    <script>
+        // step 1 : Add event listener to the button
+        document.getElementById('btn-post').addEventListener('click', function () {
+            // Step 2 : get the text from the input field.
+            let newComment = document.getElementById('new-comment');
+            //    step 3 : Adding the new comment in the comment section
+
+          const commentSection =  document.getElementById('comment-section');
+            const p = document.createElement('p');
+            p.innerText = newComment.value;
+            commentSection.appendChild(p);
+            // Step 4 : clearing the text area
+            newComment.value = '';
+            // document.getElementById('new-comment').value = '';
+        })
+    </script>
+
+</body>
+
+</html>
