@@ -1,0 +1,1 @@
+console.log('Added from the script file.');
