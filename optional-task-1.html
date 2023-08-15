@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Optional Tasks</title>
+</head>
+
+<body>
+    <div id="container" style="display: flex; justify-content: center; align-items: center; height: 100vh;">
+        <button id="btn-boom"
+            style="text-align: center; height: 200px; width: 350px; background-color: red; border: none; border-radius: 10px; font-size: xx-large; font-weight: bolder; text-transform: uppercase;">
+            Da Bomb!
+        </button>
+        <img id="image" src="oppenheimer1.png" style="display: none; height: 85vh; width: auto;" alt="Atom Bomb Image">
+    </div>
+
+    <script>
+        const container = document.getElementById('container');
+        const btnBoom = document.getElementById('btn-boom');
+        const image = document.getElementById('image');
+        
+        btnBoom.addEventListener('click', function () {
+            btnBoom.style.display = 'none';
+            image.style.display = 'block'; 
+        });
+
+        document.addEventListener('click', function (event) {
+            if (event.target !== btnBoom) {
+                btnBoom.style.display = 'block';
+                image.style.display = 'none'; 
+            }
+        });
+    </script>
+</body>
+
+</html>
