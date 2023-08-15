@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Show Image on Button Click</title>
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <div id="container" style="display: flex; justify-content: center; align-items: center; height: 100vh;">
+        <button id="btn-boom"
+            style="text-align: center; height: 200px; width: 350px; background: linear-gradient(to bottom, #d9f730, #39fabd); border: none; border-radius: 10px; font-size: xx-large; font-weight: bolder; text-transform: uppercase;">
+            Let's Dance!!
+        </button>
+        <img id="image"
+            src="2b9df5c13804a6e5f12ecdd94691e9a6.gif"
+            style="display: none; height: 100vh; width: auto;"
+            alt="Atom Bomb Image">
+    </div>
+
+    <audio id="backgroundAudio" loop>
+        <source src="euphoric-electric-groove-160306.mp3" type="audio/mpeg">
+    </audio>
+
+    <script>
+        const container = document.getElementById('container');
+        const btnBoom = document.getElementById('btn-boom');
+        const image = document.getElementById('image');
+        const backgroundAudio = document.getElementById('backgroundAudio');
+        
+        btnBoom.addEventListener('click', function () {
+            btnBoom.style.display = 'none'; 
+            image.style.display = 'block'; 
+            backgroundAudio.play(); 
+        });
+
+        document.addEventListener('click', function (event) {
+            if (event.target !== btnBoom) {
+                btnBoom.style.display = 'block'; 
+                image.style.display = 'none'; 
+                backgroundAudio.pause(); 
+            }
+        });
+    </script>
+</body>
+</html>
